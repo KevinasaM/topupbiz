@@ -1,0 +1,41 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-150px) rotateX(30deg);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(10px) rotateX(-10deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+  }
+  60% {
+    opacity: 0.8;
+    transform: translateY(-5px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
