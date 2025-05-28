@@ -31,7 +31,7 @@ const ContactPage = () => {
   }, [])
 
   return (
-    <div className="bg-gray-50 min-h-screen mt-6">
+    <div className="bg-gray-50 min-h-screen mt-20">
       <div className="container mx-auto px-4 py-12">
         <h1 className="text-4xl font-bold text-center text-blue-900 mb-8 animate-fade-in-down">Hubungi Kami</h1>
         <p className="text-xl text-center text-gray-600 mb-12 animate-fade-in-up">
