@@ -30,16 +30,104 @@ const HomePage = () => {
 
   return (
     <div className="bg-gray-50 mt-6">
+
       {/* Hero Section */}
-      <section className="bg-blue-900 text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl font-bold mb-4 animate-fade-in-down">Selamat Datang di TOPAPPBIZ Digital</h1>
-          <p className="text-xl mb-8 animate-fade-in-up">Layanan akun premium murah terbaik, tercepat, dan paling dapat diandalkan untuk aplikasi dan platform favorit Anda.</p>
-          <Link to="/services" className="bg-white text-blue-900 font-bold py-3 px-6 rounded-full hover:bg-blue-100 transition duration-300 transform hover:scale-105 hover:shadow-lg inline-block">
-            Pesan Sekarang
-          </Link>
+      <section className="relative overflow-hidden bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white">
+        {/* Decorative shapes + subtle photo background */}
+        <div className="pointer-events-none absolute inset-0">
+          {/* Pastikan file ada: public/images/hero-bg.jpg */}
+          <img
+            src="/images/hero-bg.jpg"
+            alt=""
+            aria-hidden="true"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover opacity-40 md:opacity-60 filter blur-sm brightness-95 scale-[1.05] z-0"
+          />
+
+          <svg className="absolute right-0 top-0 w-96 opacity-20 transform translate-x-20 -translate-y-16 z-10" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <g transform="translate(300,300)">
+              <circle r="200" fill="#1e3a8a" />
+            </g>
+          </svg>
+
+          <div className="absolute left-0 bottom-0 w-60 h-60 bg-blue-700 opacity-30 rounded-full -translate-x-12 translate-y-12 z-10"></div>
+        </div>
+
+        <div className="container mx-auto px-4 py-20 relative z-20">
+          <div className="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Left content */}
+            <div className="lg:col-span-7 text-center lg:text-left">
+              <p className="inline-block rounded-full bg-yellow-300/20 text-yellow-300 px-3 py-1 text-sm font-semibold mb-4">Pelayanan 24/7 · Harga Terjangkau</p>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+                Akses Konten Premium dengan
+                <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-white to-yellow-300">TOPAPPBIZ Digital</span>
+              </h1>
+              <p className="text-lg sm:text-xl text-blue-100/90 mb-8 max-w-2xl">
+                Layanan akun premium murah, tercepat, dan paling dapat diandalkan untuk aplikasi dan platform favorit Anda — mulai dari Netflix, Spotify hingga Capcut dan banyak lagi.
+              </p>
+
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-start gap-3">
+                <Link
+                  to="/services"
+                  className="inline-flex items-center justify-center bg-white text-blue-900 font-bold py-3 px-6 rounded-full shadow-lg hover:scale-105 transform transition"
+                >
+                  Pesan Sekarang
+                </Link>
+
+                <a
+                  href="https://wa.me/6285600601619"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-green-500 text-white font-semibold py-3 px-5 rounded-full shadow hover:bg-green-600 transition"
+                >
+                  Order via WhatsApp
+                </a>
+              </div>
+
+              {/* Small feature list */}
+              <div className="mt-8 flex flex-wrap gap-3 text-sm text-blue-100/90">
+                <span className="inline-flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full">⚡ Fast Delivery</span>
+                <span className="inline-flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full">🔒 Secure</span>
+                <span className="inline-flex items-center gap-2 bg-white/5 px-3 py-1 rounded-full">💬 Support 24/7</span>
+              </div>
+            </div>
+
+            {/* Right illustrative panel */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="w-full max-w-md bg-white/5 backdrop-blur-sm rounded-2xl p-6 shadow-2xl transform transition hover:scale-102">
+                <div className="h-44 bg-gradient-to-tr from-white/10 via-white/5 to-white/5 rounded-lg mb-4 flex items-center justify-center">
+                  <div className="text-center">
+                    <h3 className="text-white font-semibold">Akun Premium</h3>
+                    <p className="text-sm text-blue-100/80 mt-2">Contoh layanan: Netflix, Spotify, Capcut</p>
+                  </div>
+                </div>
+
+                <ul className="space-y-3">
+                  <li className="flex items-center justify-between text-sm">
+                    <span className="text-blue-100/90">Harga Mulai</span>
+                    <strong className="text-white">Rp. 5.000</strong>
+                  </li>
+                  <li className="flex items-center justify-between text-sm">
+                    <span className="text-blue-100/90">Dukungan</span>
+                    <span className="text-white">24/7 via WhatsApp</span>
+                  </li>
+                  <li className="flex items-center justify-between text-sm">
+                    <span className="text-blue-100/90">Metode Pembayaran</span>
+                    <span className="text-white">QR, Seabank, Gopay, Dana, BRI</span>
+                  </li>
+                </ul>
+
+                <div className="mt-6">
+                  <Link to="/services" className="block w-full text-center bg-yellow-300 text-blue-900 font-bold py-2 px-4 rounded-md hover:opacity-95 transition">
+                    Lihat Layanan
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+
 
       {/* Featured Services Section */}
       <section className="py-16">

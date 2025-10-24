@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     question: "Metode pembayaran apa yang Anda terima?",
-    answer: "Kami menerima metode pembayaran berbasis QR Code, Gopay, Dana, dan BRI. Anda dapat menemerima QR Code tersebut saat akan melakukan pembayaran."
+    answer: "Kami menerima metode pembayaran berbasis QR Code, Seabank, Gopay, dan Dana. Anda dapat menemerima QR Code tersebut saat akan melakukan pembayaran."
   },
   {
     question: "Bagaimana jika saya mengalami masalah dengan akun premium saya?",

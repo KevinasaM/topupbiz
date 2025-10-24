@@ -21,7 +21,7 @@ const HowToOrderPage = () => {
           </li>
           <li className="text-lg">
             <h2 className="font-semibold text-blue-900 mb-2">Lakukan Pembayaran</h2>
-            <p>Admin akan memberikan code QR untuk melakukan pembayaran, atau metode pembayaran lain seperti Gopay, Dana, dan BRI.</p>
+            <p>Admin akan memberikan code QR untuk melakukan pembayaran, atau metode pembayaran lain seperti Seabank, Gopay, Dana, dan BRI.</p>
           </li>
           <li className="text-lg">
             <h2 className="font-semibold text-blue-900 mb-2">Terima Akun</h2>
@@ -40,26 +40,28 @@ const HowToOrderPage = () => {
         </div>
       </div>
       {/* Footer Section */}
-      <footer className="bg-blue-900 text-white py-8 mt-12">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-4">Pesan Layanan Kami</h2>
-          <p className="mb-6">Pilih layanan yang tersedia dan dapatkan akun premium sesuai kebutuhan Anda.</p>
-          <div className="flex justify-center space-x-4">
-            <Link
-              to="/services"
-              className="bg-white text-blue-900 font-bold py-2 px-4 rounded-md hover:bg-blue-100 transition duration-300 transform hover:scale-105"
-            >
-              Lihat Layanan
-            </Link>
-            <Link
-              to="/faq"
-              className="bg-white text-blue-900 font-bold py-2 px-4 rounded-md hover:bg-blue-100 transition duration-300 transform hover:scale-105"
-            >
-              Tanya Jawab
-            </Link>
-          </div>
-        </div>
-      </footer>
+      
+      {/* Footer Section */}
++      <footer className="bg-blue-900 text-white py-8 mt-12 rounded-t-3xl shadow-xl overflow-hidden">
+         <div className="container mx-auto px-4 text-center">
+           <h2 className="text-2xl font-bold mb-4">Pesan Layanan Kami</h2>
+           <p className="mb-6">Pilih layanan yang tersedia dan dapatkan akun premium sesuai kebutuhan Anda.</p>
+           <div className="flex justify-center space-x-4">
+             <Link
+               to="/services"
+               className="bg-white text-blue-900 font-bold py-2 px-4 rounded-md hover:bg-blue-100 transition duration-300 transform hover:scale-105"
+             >
+               Lihat Layanan
+             </Link>
+             <Link
+               to="/faq"
+               className="bg-white text-blue-900 font-bold py-2 px-4 rounded-md hover:bg-blue-100 transition duration-300 transform hover:scale-105"
+             >
+               Tanya Jawab
+             </Link>
+           </div>
+         </div>
+       </footer>
     </div>
   )
 }
