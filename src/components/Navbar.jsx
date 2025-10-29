@@ -1,4 +1,4 @@
-// ...existing code...
+
 import { NavLink, useLocation } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react' // ikon hamburger dan close (gunakan lucide-react)
@@ -40,21 +40,21 @@ const Navbar = () => {
           </NavLink>
 
           {/* Desktop links + CTA */}
-          <div className="hidden lg:flex lg:items-center lg:space-x-6">
+          <div className="hidden lg:flex lg:items-center lg:space-x-2">
             <NavLink to="/" className={linkClass}>Home</NavLink>
             <NavLink to="/services" className={linkClass}>Services</NavLink>
             <NavLink to="/how-to-order" className={linkClass}>How to Order</NavLink>
             <NavLink to="/faq" className={linkClass}>FAQ</NavLink>
             <NavLink to="/contact" className={linkClass}>Contact</NavLink>
 
-            <a
+            {/* <a
               href="https://wa.me/6285600601619"
               target="_blank"
               rel="noopener noreferrer"
               className="ml-3 inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-md shadow transition transform hover:-translate-y-0.5"
             >
               Order via WhatsApp
-            </a>
+            </a> */}
           </div>
 
           {/* Hamburger (mobile) */}
