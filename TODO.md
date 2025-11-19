@@ -1,0 +1,4 @@
+- [ ] Update services array in HomePage.jsx to include image paths for Netflix, Capcut, Canva
+- [ ] Modify the Featured Services Section JSX to include animated img tags with hover effects
+- [ ] Enhance card styling with gradients, shadows, and professional look
+- [ ] Test the changes by running the dev server

@@ -194,9 +194,9 @@ const HowToOrderPage = () => {
           className="inline-flex items-center gap-3 bg-green-500 text-white px-4 py-3 rounded-full shadow-lg hover:bg-green-600 transition transform hover:scale-105"
           aria-label="Order via WhatsApp"
         >
-          <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden>
-            <path d="M21 3 3 21" stroke="currentColor" strokeWidth="0" />
-          </svg>
+          <svg className="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 0C5.373 0 0 5.373 0 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-6.627-5.373-12-12-12zm.615 18.31h-.045c-1.037-.038-2.06-.3-2.995-.82l-3.075.81.825-3.015c-.575-.965-.865-2.025-.865-3.13 0-3.585 2.915-6.5 6.5-6.5s6.5 2.915 6.5 6.5-2.915 6.5-6.5 6.5z"/>
+                </svg>
           Order via WhatsApp
         </a>
       </div>

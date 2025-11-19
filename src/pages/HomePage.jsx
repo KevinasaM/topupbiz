@@ -9,6 +9,12 @@ const TESTIMONIALS = [
   { name: 'Satriya A.', initials: 'SA', text: 'Harga yang sangat terjangkau dengan kualitas layanan yang luar biasa, melayani hingga malam hari:).' }
 ]
 
+const POPULAR_SERVICES = [
+  { name: 'Netflix', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeSMLjxJWXh0dXH_XJIKEnCu-9FXkZmByKyw&s', description: 'Dapatkan akses premium ke Netflix dengan harga yang tidak ada duanya!' },
+  { name: 'Capcut', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzlbD8zESZ4Qqb-7qIsW2iYn7EuIEKwNCrxQ&s', description: 'Dapatkan akses premium ke Capcut dengan harga yang tidak ada duanya!' },
+  { name: 'Canva', logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdA1wx17KfcwCjzdeTlhnSpDAuem017gnw-w&s', description: 'Dapatkan akses premium ke Canva dengan harga yang tidak ada duanya!' }
+]
+
 const HomePage = () => {
   const [isVisible, setIsVisible] = useState(false)
   const scrollRef = useRef(null)
@@ -128,11 +134,19 @@ const HomePage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Layanan Populer</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {['Netflix', 'Capcut', 'Canva'].map((service, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">{service}</h3>
-                <p className="mb-4">Dapatkan akses premium ke {service} dengan harga yang tidak ada duanya!</p>
-                <Link to="/services" className="text-blue-600 hover:text-blue-800 transition duration-300 hover:underline">Learn More →</Link>
+            {POPULAR_SERVICES.map((service, index) => (
+              <div key={index} className="bg-gradient-to-br from-white to-gray-50 p-8 rounded-2xl shadow-2xl text-center transform transition duration-500  group">
+                <div className="mb-6 flex justify-center">
+                  <img
+                    src={service.logo}
+                    alt={`${service.name} logo`}
+                    className="w-20 h-20 object-contain animate-pulse group-hover:animate-bounce group-hover:scale-110 transition duration-500"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-2xl font-bold text-blue-900 mb-4 group-hover:text-blue-700 transition duration-300">{service.name}</h3>
+                <p className="text-gray-700 mb-6 leading-relaxed">{service.description}</p>
+                <Link to="/services" className="inline-block bg-blue-600 text-white font-semibold py-3 px-6 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">Learn More →</Link>
               </div>
             ))}
           </div>
@@ -198,19 +212,54 @@ const HomePage = () => {
       </div>
 
       {/* Why Choose Us Section */}
-      <section className="py-16">
+      <section className="py-16 bg-yellow-5">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-blue-900 mb-12">Mengapa Memilih TOPAPPBIZ Digital?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { title: 'Harga Terjangkau', description: 'Dapatkan layanan premium dengan harga tak bikin miskin.' },
-              { title: 'Banyak Pilihan', description: 'Pilih dari berbagai aplikasi dan platform populer.' },
-              { title: 'Layanan Terpercaya', description: 'Nikmati akses tanpa gangguan, ke konten favorit Anda.' },
-              { title: 'Dukungan 24 Jam', description: 'Tim kami selalu siap membantu Anda.' }
+              {
+                title: 'Harga Terjangkau',
+                description: 'Dapatkan layanan premium dengan harga tak bikin miskin.',
+                icon: (
+                  <svg className="w-12 h-12 text-black-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
+                  </svg>
+                )
+              },
+              {
+                title: 'Banyak Pilihan',
+                description: 'Pilih dari berbagai aplikasi dan platform populer.',
+                icon: (
+                  <svg className="w-12 h-12 text-black-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                  </svg>
+                )
+              },
+              {
+                title: 'Layanan Terpercaya',
+                description: 'Nikmati akses tanpa gangguan, ke konten favorit Anda.',
+                icon: (
+                  <svg className="w-12 h-12 text-black-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                )
+              },
+              {
+                title: 'Dukungan 24 Jam',
+                description: 'Tim kami selalu siap membantu Anda.',
+                icon: (
+                  <svg className="w-12 h-12 text-black-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                  </svg>
+                )
+              }
             ].map((feature, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center transform transition duration-300 hover:scale-105 hover:shadow-xl">
-                <h3 className="text-xl font-semibold text-blue-900 mb-4">{feature.title}</h3>
-                <p>{feature.description}</p>
+              <div key={index} className="bg-white p-6 rounded-lg shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                <div className="mb-4 flex justify-center">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-black-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
               </div>
             ))}
           </div>
